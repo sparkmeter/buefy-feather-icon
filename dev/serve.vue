@@ -1,12 +1,8 @@
 <script lang="ts">
 import Vue from "vue";
-import BuefyFeatherIcon from "@/buefy-feather-icon.vue";
 
 export default Vue.extend({
   name: "ServeDev",
-  components: {
-    BuefyFeatherIcon,
-  },
 });
 </script>
 

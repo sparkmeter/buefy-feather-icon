@@ -1,13 +1,7 @@
 <script lang="ts">
 import Vue, { PropType } from "vue";
 import VueFeather from "vue-feather";
-
-// Add additional mappings from Buefy's font-awesome names to Feather's as they become necessary
-const iconAliases: { [bulmaName: string]: string } = {
-  information: "info",
-  magnify: "search",
-  times: "x",
-};
+import { iconAliases } from "./config";
 
 export default /*#__PURE__*/ Vue.extend({
   name: "BuefyFeatherIcon", // vue component name
