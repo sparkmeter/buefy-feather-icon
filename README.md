@@ -32,3 +32,25 @@ Vue.use(Buefy, {
 // Proceed with application initialization
 new Vue(/** **/).$mount("#app");
 ```
+
+## Configuration
+
+Buefy uses the names of Font Awesome icons for its bundled components. For
+example, it will use `times` when attempting to render a close _x_. The Feather
+icon collection uses a different set of names for some of these. This library
+ships with a basic set of mappings from Font Awesome to Feather. However, it is
+not complete (PRs welcome!).  To that end, if you wish to fill a gap, or
+override any of the builtins icons, add the following configuration to your
+entrypoint.
+
+```js
+Vue.use(BuefyFeatherIcon, {
+  aliases: {
+    "font-awesome-icon-name": "feather-icon-name",
+  },
+});
+Vue.use(Buefy, {
+  defaultIconPack: "feather-icons",
+  defaultIconComponent: BuefyFeatherIcon,
+});
+```

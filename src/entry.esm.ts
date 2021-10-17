@@ -2,9 +2,13 @@ import _Vue, { PluginObject } from "vue";
 
 // Import vue component
 import component from "@/buefy-feather-icon.vue";
+import { setAliases } from "./config";
+import type  { IconAliases } from "./config";
+
+export type BuefyFeatherIconConfig = { aliases: IconAliases };
 
 // Define typescript interfaces for installable component
-type InstallableComponent = typeof component & PluginObject<any>;
+type InstallableComponent = typeof component & PluginObject<BuefyFeatherIconConfig>;
 
 // Default export is installable instance of component.
 // IIFE injects install function into component, allowing component
@@ -14,7 +18,10 @@ export default /*#__PURE__*/ ((): InstallableComponent => {
   const installable = (component as unknown) as InstallableComponent;
 
   // Attach install function executed by Vue.use()
-  installable.install = (Vue: typeof _Vue) => {
+  installable.install = (Vue: typeof _Vue, options?: BuefyFeatherIconConfig) => {
+    if (options?.aliases) {
+      setAliases(options.aliases);
+    }
     Vue.component("BuefyFeatherIcon", installable);
   };
   return installable;
