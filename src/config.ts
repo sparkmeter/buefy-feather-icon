@@ -8,12 +8,12 @@ let iconAliases: IconAliases = {
 };
 
 /**
-  * Update the mapping of Buefy's font-awesome icon names to named Feather icons.
-  *
-  * @param { object } aliases - the mapping of font-awesome icon names to Feather icon names.
-  */
+ * Update the mapping of Buefy's font-awesome icon names to named Feather icons.
+ *
+ * @param { object } aliases - the mapping of font-awesome icon names to Feather icon names.
+ */
 function setAliases(aliases: IconAliases) {
-  iconAliases = {...iconAliases, ...aliases};
+  iconAliases = { ...iconAliases, ...aliases };
 }
 
 export { iconAliases, setAliases };
