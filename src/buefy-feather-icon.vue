@@ -6,11 +6,10 @@ import { iconAliases } from "./config";
 export default /*#__PURE__*/ Vue.extend({
   name: "BuefyFeatherIcon", // vue component name
   components: {
-    VueFeather,
+    feather: VueFeather,
   },
   props: {
-    icon: { type: Array as PropType<string[]> },
-    size: String,
+    icon: { type: Array as PropType<string[]>, required: true },
   },
   computed: {
     iconType(): string {
@@ -25,7 +24,7 @@ export default /*#__PURE__*/ Vue.extend({
 </script>
 
 <template>
-  <feather class="feather-icons" :type="iconType"></feather>
+  <feather class="feather-icons" :type="iconType" />
 </template>
 
 <style>
