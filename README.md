@@ -1,3 +1,5 @@
+![](https://img.shields.io/npm/v/buefy-feather-icon)
+
 ## buefy-feather-icon
 
 Use [vue-feather](https://www.npmjs.com/package/vue-feather) icon components in [Buefy](https://www.npmjs.com/package/buefy).
