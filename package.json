@@ -1,11 +1,14 @@
 {
   "name": "buefy-feather-icon",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Use vue-feather icon components in Buefy.",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/sparkmeter/buefy-feather-icon"
+  },
+  "bugs": {
+    "url": "https://github.com/sparkmeter/buefy-feather-icon/issues"
   },
   "main": "dist/buefy-feather-icon.ssr.js",
   "browser": "dist/buefy-feather-icon.esm.js",
