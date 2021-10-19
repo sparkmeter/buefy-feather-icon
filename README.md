@@ -1,4 +1,4 @@
-![](https://img.shields.io/npm/v/buefy-feather-icon)
+[![](https://img.shields.io/npm/v/buefy-feather-icon)](https://www.npmjs.com/package/buefy-feather-icon)
 
 ## buefy-feather-icon
 
